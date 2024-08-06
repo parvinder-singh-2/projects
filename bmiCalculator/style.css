@@ -1,0 +1,28 @@
+html {
+  margin: 0;
+  }
+  
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+  
+body{
+  background-color:#212121;
+  color: #fff;
+}
+
+#input-block{
+  gap: 10px;
+}
+
+h1{
+  margin-bottom: 3%;
+}
+
+#submit{
+  font-size: 20px;
+  margin-top: 2%;
+}
+  
