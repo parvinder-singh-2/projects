@@ -6,6 +6,7 @@ form.addEventListener('submit', function(e){
     const height = parseInt(document.querySelector('#height').value);
     const weight = parseInt(document.querySelector('#weight').value);
     const results = document.querySelector('#results')
+    const show = document.querySelector('#show')
 
     if(height === 0 || height < 0 || isNaN(height)){
         results.innerHTML = `Please Enter a Valid Height`
@@ -15,6 +16,18 @@ form.addEventListener('submit', function(e){
         results.innerHTML = (weight / ((height*height)/10000)).toFixed(2)
     }
 
-    
+    let answer = results.innerHTML;
+    if (answer<18.6){
+        show.innerHTML = (`You are Under Weight`);
+        show.className = ('blue');
+    } else if (answer<24.9){
+        show.innerHTML = (`You are in Normal Range`);
+        show.className = ('green');
+    } else{
+        show.innerHTML = (`You are Over Weight`);
+        show.className = ('red');
+    }
+
+
 
 })
